@@ -103,7 +103,7 @@ execCommand가 jar 파일 실행에 필요한 shell script를 실행시킨다.
 
 이때 파일 위치는 절대경로로 해주어야 제대로 인식한다.
 
-#### pipeline syntax - sshPublisher
+### pipeline syntax - sshPublisher
 
 **SSH Server**
 
@@ -120,7 +120,7 @@ execCommand가 jar 파일 실행에 필요한 shell script를 실행시킨다.
 
 Settings -> Webhooks -> add webhook
 
-Payload URL: http://<ngrok에 나오는 주소>/github-webhook/
+Payload URL: http://<1번-EC2 public ip>/github-webhook/
 
 Content type: application/json
 
