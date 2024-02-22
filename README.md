@@ -18,7 +18,7 @@ $ docker run --name myjenkins --privileged -p 8080:8080 jenkins/jenkins:lts-jdk1
 
 ### docker permission denied
 
-EC2에 docker를 설치했다면 그룹에 추가해야 사용할 수 있다.
+EC2에 docker를 처음 설치했다면 그룹에 추가해야 사용할 수 있다.
 
 ```
 $ sudo usermod -aG docker $USER
@@ -35,7 +35,7 @@ jenkins 비밀번호 확인
 $ docker exec myjenkins sh -c 'cat /var/jenkins_home/secrets/initialAdminPassword' 
 ```
 
-[http://127.0.0.1:8080으로](http://127.0.0.1:8080으로/) 접속
+[http://127.0.0.1:8080](http://127.0.0.1:8080/)으로 접속
 
 ### 파이프라인 구성
 
