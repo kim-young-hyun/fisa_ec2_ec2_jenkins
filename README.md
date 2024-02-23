@@ -103,11 +103,17 @@ execCommand가 jar 파일 실행에 필요한 shell script를 실행시킨다.
 
 이때 파일 위치는 절대경로로 해주어야 제대로 인식한다.
 
-### pipeline syntax - sshPublisher
-
+### SSH server 등록
+jenkins 관리 -> plugin 설치 -> 'Publish over SSH' install
+key는 .pem을 등록( ppk만 있다면 movaXerm같은 tool로 변환해서 등록)
 **SSH Server**
+1. name: 사용할 서버 이름(아무거나 가능)
+2. Hostname: 서버의 ip 주소
+3. username: 서버에서 사용하는 id
+4. Remote Directory: 사용할 디렉토리 주소 [/home/<username>]
 
-1. Name: 사용할 이름 아무거나
+### pipeline syntax - sshPublisher
+1. Name: 사용할 서버 이름 선택
 2. Transfers
    1. Source files: 생성된 jarfile의 위치 입력 [build/libs/*SNAPSHOT.jar]
    2. Remove prefix: jarfile의 파일위치 입력 [build/libs]
